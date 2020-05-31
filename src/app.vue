@@ -112,7 +112,6 @@ export default {
             delete this.availablesBots[botId];
           }
           this.upResult(status);
-          console.log(rs);
         });
       });
 
@@ -135,7 +134,6 @@ export default {
 
     tick() {
       if (!this.bots) return;
-      console.log('Tick !');
       const now = Date.now();
       Object.keys(this.bots).forEach((botId) => {
         if (!this.lastBotVote[botId] || this.lastBotVote[botId] + 600000 < now) {
