@@ -1,4 +1,8 @@
-const url = 'https://api.usp-3.fr/kingbot';
+const url = (
+  process.env.NODE_ENV !== 'development'
+    ? 'https://kingbot.apis.usp-3.fr'
+    : 'http://localhost:3000'
+);
 
 function rq(method, type, data, callback = () => {}) {
   const xhr = new XMLHttpRequest();

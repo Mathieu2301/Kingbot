@@ -3,8 +3,8 @@
     <div class="header">Kingbot</div>
 
     <loading v-show="tab=='loading'"></loading>
-    <div class="container" v-show="tab=='default'">
 
+    <div class="container" v-show="tab == 'default'">
       <div class="inline notfull">
         <div>Status</div>
         <div v-if="connected">{{ ip }}</div>
@@ -55,7 +55,7 @@
 
 <script>
 import filters from '@/filters';
-import loading from '@/loading';
+import loading from '@/loading.vue';
 
 export default {
   name: 'Kingbot',
@@ -301,5 +301,4 @@ select {
 .bg_select2 { background-color: var(--color3) !important }
 
 .clickable { cursor: pointer }
-
 </style>
